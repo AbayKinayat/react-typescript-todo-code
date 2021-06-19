@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.dflex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between; 
+}
+
+.justify-center {
+  justify-content:  center; 
+}
+
+.align-center {
+  align-items: center; 
+}
+
+.pt {
+  padding-top: 15px !important;
+}
+.pb {
+  padding-bottom: 15px !important;
+}
+.pr {
+  padding-right: 15px !important;
+}
+.pl {
+  padding-left: 15px !important;
+}
+.px {
+  padding: 15px !important;
+}
+
+.mt {
+  margin-top: 15px !important;
+}
+.mb {
+  margin-bottom: 15px !important;
+}
+.mr {
+  margin-right: 15px !important;
+}
+.ml {
+  margin-left: 15px !important;
+}
+.mx {
+  margin: 15px !important;
+}
+
+.main {
+  max-width: 1110px;
+
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.MuiFormControl-root {
+  flex-direction: row !important
+}
+
+.MuiAppBar-root {
+  flex-direction: row !important
+}
+
+.MuiInputBase-formControl {
+  width: 100%;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2196f3;
+  cursor: pointer;
+  transition: .5s;
+  color: #fff !important;
+  overflow: hidden;
+
+  border-radius: 10px;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+}
+
+.todo-item:hover {
+  filter: brightness(1.2);
+}
+
+.todo-item.completed span {
+  text-decoration: line-through !important;
+}
+
+.delete-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #2196f3;
+}
+
+.delete-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: rgb(255, 0, 0);
+  z-index: 10;
+}
+
+.delete-box .delete-circle_active {
+  width: 3000px;
+  height: 3000px;
+  opacity: 0;
+  transition: 2s;
+}
+
+.about-page {
+  max-width: max-content;
+  color: #fff;
+  text-align: start;
+  opacity: 0;
+  transition: .5s ease-in-out;
+  transform: scale(0.9) translateY(50%);
+
+  border-radius: 30px;
+  background-color: #2196f3;
+  margin-top: 30px;
+  padding: 15px 15px
+}
+
+.about-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.author-container {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .todo-item {
+    padding: 5px 15px;
+  }
+}
